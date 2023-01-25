@@ -4,26 +4,13 @@
 </script>
 
 <div class="app">
-	<Header />
-
 	<main>
 		<slot />
-
-		<h1 class="text-3xl font-bold underline">Hello world!</h1>
-
-		<style lang="postcss">
-			:global(html) {
-				background-color: theme(colors.gray.100);
-			}
-		</style>
 	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	<footer />
 </div>
 
-<style>
+<style lang="postcss">
 	.app {
 		display: flex;
 		flex-direction: column;
