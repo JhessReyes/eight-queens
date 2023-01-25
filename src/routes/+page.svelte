@@ -10,7 +10,7 @@
 </svelte:head>
 
 <section id="home">
-	<Counter />
+	<div class="text-white text-2xl btn">Hello World</div>
 </section>
 
 <style lang="postcss">
