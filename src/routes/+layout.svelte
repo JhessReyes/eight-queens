@@ -3,7 +3,7 @@
 	import './styles.css';
 </script>
 
-<div class="app bg-primary w-full h-screen ">
+<div class="app bg-gradient-to-r from-primary via-accent to-secondary w-full h-screen">
 	<main>
 		<slot />
 	</main>
