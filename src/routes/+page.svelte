@@ -91,27 +91,33 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section id="home">
-	<button class="text-white text-2xl btn" on:click={() => solve()}>Resolver</button>
+<section id="home" class="text-white">
+	<div class="my-3">
+		<button class="text-white text-2xl btn" on:click={() => solve()}>Resolver</button>
+	</div>
 	<p class="text-lg">
-		Se han encontrado: <strong class=" text-blue-900">
+		Se han encontrado: <strong>
 			{boardsSolution.length}
 		</strong>
 		soluciones
 	</p>
 	{#if boardsSolution.length > 0}
-		<Counter bind:count={c} limit={boardsSolution.length} />
+		<div class="my-8">
+			<Counter bind:count={c} limit={boardsSolution.length} />
+		</div>
 		{@const board = boardsSolution[c - 1]}
 		{#if board}
-			<div class="board w-144 border-cyan-200">
+			<div class="board w-144  border-cyan-200">
 				{#each board as row, i}
 					{#each row as square, j}
 						<div
-							class={`sm:w-12 sm:h-12 md:w-20 md:h-20 text-center text-2xl square-${
+							class={`w-[25px] h-[25px] text-center text-sm text-primary square-${
 								square === 2 ? 'white ' : 'black '
-							} ${square === 1 ? 'queen' : ''}`}
+							} ${square === 1 ? 'queen ' : ' '} sm:w-20 sm:h-20 sm:text-6xl`}
 						>
-							{square === 1 ? '♕' : ''}
+							<span class="text-center ">
+								{square === 1 ? '♕' : ''}
+							</span>
 						</div>
 					{/each}
 				{/each}
